@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "307616555089",
+    "project_id": "can-arrange",
+    "storage_bucket": "can-arrange.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:307616555089:android:1b5d94b25b39ba61f79870",
+        "android_client_info": {
+          "package_name": "com.example.canaarange"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "307616555089-39msnvmff2ap66nm8p8k98ls4p00l0cg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDCRUSawKZphwMVT-0YYTL9dSHfl_eQu1M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "307616555089-39msnvmff2ap66nm8p8k98ls4p00l0cg.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "307616555089-7vqbjt8btteoohg0gfqeemrkq3m53uoc.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.canaarange"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
