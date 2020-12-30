@@ -21,6 +21,8 @@ class _LoginScreenState extends State<LoginScreen> {
   bool _isLoading = false;
   bool loadingGoogle = false;
 
+  String _error = '';
+
   bool hidden = true;
 
   @override
@@ -127,6 +129,15 @@ class _LoginScreenState extends State<LoginScreen> {
                         },
                       ),
                       SizedBox(
+                        height: 10,
+                      ),
+                      _error.length > 0
+                          ? Text(
+                              _error,
+                              style: SmallBoldRedText,
+                            )
+                          : Container(),
+                      SizedBox(
                         height: 30,
                       ),
                     ],
@@ -167,10 +178,16 @@ class _LoginScreenState extends State<LoginScreen> {
                                   _isLoading = false;
                                 });
                                 // Navigator.pop(context);
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) => WrapperUser()));
+                                if (result is String) {
+                                  setState(() {
+                                    _error = result;
+                                  });
+                                } else {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) => WrapperUser()));
+                                }
                               }
 
                               setState(() {

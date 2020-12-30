@@ -27,7 +27,12 @@ class AuthService {
       User user = result.user;
       return user;
     } catch (e) {
-      print(e.toString());
+      if (e.code == 'wrong-password') {
+        return 'Invalid password';
+      }
+      if (e.code == 'user-not-found') {
+        return 'Mail doesn\'t exist';
+      }
       return null;
     }
   }
